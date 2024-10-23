@@ -381,10 +381,10 @@ pub(crate) fn get_os_error_from_id(id: i32) -> std::io::Result<()> {
 }
 
 pub(crate) fn set_adapter_mtu(name: &str, mtu: usize) -> std::io::Result<()> {
-    // command line: `netsh interface ipv4 set subinterface "MyAdapter" mtu=1500 store=persistent`
+    // command line: `netsh interface ipv6 set subinterface "MyAdapter" mtu=1500 store=persistent`
     let args = &[
         "interface",
-        "ipv4",
+        "ipv6",
         "set",
         "subinterface",
         &format!("\"{}\"", name),
